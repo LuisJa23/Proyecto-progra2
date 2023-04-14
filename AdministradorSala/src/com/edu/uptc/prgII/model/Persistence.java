@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.util.ArrayList;
 
 /**
  * 
@@ -40,4 +42,19 @@ public class Persistence {
 		Output.close();
 		return true;
 	}
+	public ArrayList<Student> readInformaticsRooms() {
+		ArrayList<Student> Student = null;
+        try {
+            FileInputStream fileInputStream = new FileInputStream("src/Students");
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            @SuppressWarnings("unchecked")
+			ArrayList<Student> readObject = (ArrayList<Student>) objectInputStream.readObject();
+			Student = readObject;
+            objectInputStream.close();
+            fileInputStream.close();
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Error al leer las salas de informática.");
+        }
+        return Student;
+    }
 }
