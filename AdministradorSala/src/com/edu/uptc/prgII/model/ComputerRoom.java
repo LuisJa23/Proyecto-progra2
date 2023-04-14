@@ -22,6 +22,16 @@ public class ComputerRoom {
 	 * 
 	 * @return
 	 */
+	public ArrayList<Computer> getComputers() {
+		return computers;
+	}
+	public int size() {
+		return computers.size();
+	}
+	/**
+	 * 
+	 * @return
+	 */
 	public String activeComputers() {
 		int size = 10;
 		String list = "";
@@ -50,9 +60,5 @@ public class ComputerRoom {
 				computers.get(i).setState(true);
 			}
 		}
-	}
-
-	public ArrayList<Computer> getComputers() {
-		return computers;
 	}
 }

@@ -10,10 +10,8 @@ public class Computer {
 	 * @param id
 	 * @param state
 	 */
-	public Computer(boolean state, int id, Student Student) {
+	public Computer(Student Student) {
 		super();
-		State = state;
-		this.id = id;
 		this.studen = Student;
 	}
 

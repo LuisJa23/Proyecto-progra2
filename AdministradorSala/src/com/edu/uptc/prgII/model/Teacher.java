@@ -124,4 +124,11 @@ public class Teacher implements Serializable {
 		return serialVersionUID;
 	}
 
+	@Override
+	public String toString() {
+		return "Teacher [firtsName=" + firtsName + ", lastName=" + lastName + "]";
+	}
+	
+	
+
 }
