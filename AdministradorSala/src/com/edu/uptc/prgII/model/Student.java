@@ -77,4 +77,12 @@ public class Student implements Serializable {
 		this.lastName = lastName;
 	}
 
+	/**
+	 * 
+	 */
+	@Override
+	public String toString() {
+		return "Student [firtsName=" + firtsName + ", lastName=" + lastName + "]";
+	}
+
 }
